@@ -1,0 +1,24 @@
+from pathlib import Path
+import pandas as pd
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from sklearn.metrics import ConfusionMatrixDisplay, PrecisionRecallDisplay, RocCurveDisplay
+
+
+def make_plots(out):
+    out = Path(out)
+    h = pd.read_csv(out / 'history.csv')
+    ax = h[['loss', 'val_loss']].plot(xlabel='Epoch (zero based)', ylabel='Binary cross entropy', title='CNN-LSTM training')
+    ax.figure.tight_layout()
+    ax.figure.savefig(out / 'learning_curve.png', dpi=150)
+    plt.close(ax.figure)
+    p = pd.read_csv(out / 'test_predictions.csv')
+    fig, axes = plt.subplots(1, 3, figsize=(15, 4))
+    ConfusionMatrixDisplay.from_predictions(p.label, p.TN4_Hybrid_RF_pred, labels=[0, 1],
+                                           display_labels=['legitimate', 'phishing'], ax=axes[0], colorbar=False)
+    PrecisionRecallDisplay.from_predictions(p.label, p.TN4_Hybrid_RF_prob, ax=axes[1])
+    RocCurveDisplay.from_predictions(p.label, p.TN4_Hybrid_RF_prob, ax=axes[2])
+    fig.tight_layout()
+    fig.savefig(out / 'hybrid_test_curves.png', dpi=150)
+    plt.close(fig)
