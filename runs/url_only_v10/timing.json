@@ -1,0 +1,9 @@
+{
+  "hand_preprocessing_seconds": 34.01755520000006,
+  "cnn_lstm_train_seconds": 17758.0131368,
+  "deep_extraction_all_splits_seconds": 905.3490435000022,
+  "TN4_Hybrid_RF_rf_fit_seconds": 472.33697819999725,
+  "offline_batch_amortized_ms_per_url": 2.2871117187529912,
+  "benchmark_batch_size": 128,
+  "benchmark_note": "Includes encoding, lexical features, CNN-LSTM, imputation, RF; excludes disk model loading. Not single-request latency."
+}
