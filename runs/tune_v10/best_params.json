@@ -1,0 +1,30 @@
+{
+  "objective": "validation F1 (threshold chosen on validation)",
+  "seed": 42,
+  "split": "domain",
+  "max_len": 512,
+  "max_train": 100000,
+  "epochs_per_trial": 15,
+  "patience": 5,
+  "cnn_lstm": {
+    "embedding_dim": 128,
+    "filters": 128,
+    "kernel_size": 3,
+    "lstm_units": 64,
+    "deep_dim": 64,
+    "learning_rate": 0.0013871064052598829,
+    "dropout": 0.3314647100497403,
+    "batch_size": 128
+  },
+  "cnn_lstm_val_f1": 0.901901473617178,
+  "random_forest": {
+    "n_estimators": 500,
+    "max_depth": 24,
+    "min_samples_leaf": 2,
+    "max_features": "log2"
+  },
+  "random_forest_val_f1": 0.8980976227766527,
+  "trials_completed": 15,
+  "trials_pruned": 0,
+  "stage1_seconds": 6244.739608891
+}

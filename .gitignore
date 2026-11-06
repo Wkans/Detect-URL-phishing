@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+tmp/
+.work_doc/
+.streamlit/
+*.docx
+*.pdf
+prediction_example.csv
+
+# data: only the raw sample already in the repository
+data/*
+!data/urls_raw.csv
+
+# runs: keep only the final model (v10) and the tuning results
+runs/*
+!runs/url_only_v10/
+!runs/tune_v10/
+runs/url_only_v10/split_manifest.csv
+runs/tune_v10/tune.db

@@ -1,0 +1,1 @@
+python train.py --data data/urls.csv --split domain --seed 42 --max-len 512 --embedding-dim 128 --filters 128 --kernel-size 3 --lstm-units 64 --deep-dim 64 --batch-size 128 --learning-rate 0.00138711 --dropout 0.3315 --trees 500 --rf-max-depth 24 --rf-min-leaf 2 --rf-max-features log2 --out runs/tuned_seed42
