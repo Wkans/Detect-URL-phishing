@@ -1,0 +1,14 @@
+{
+  "_note": "Official hosts that the model tends to over-flag. 'hosts': any path. 'root_only_hosts': only the bare site (no path/query), because these hosts are also abused (open redirects, user repos, shared documents). 'domains': the domain and all its subdomains. URLs that embed another URL (redirects) are never trusted.",
+  "hosts": [
+    "docs.github.com", "support.google.com", "myaccount.google.com", "policies.google.com", "developers.google.com",
+    "cloud.google.com", "maps.google.com", "play.google.com", "books.google.com", "translate.google.com",
+    "news.google.com", "mail.google.com", "developer.android.com", "docs.python.org", "developer.mozilla.org"
+  ],
+  "root_only_hosts": [
+    "google.com", "www.google.com", "accounts.google.com", "github.com", "www.github.com"
+  ],
+  "domains": [
+    "microsoft.com", "apple.com", "paypal.com"
+  ]
+}
