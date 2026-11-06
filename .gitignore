@@ -7,9 +7,10 @@ tmp/
 *.pdf
 prediction_example.csv
 
-# data: only the raw sample already in the repository
+# data: only the dataset files below
 data/*
 !data/urls_raw.csv
+!data/urls.csv
 
 # runs: keep only the final model (v10) and the tuning results
 runs/*

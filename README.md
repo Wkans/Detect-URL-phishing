@@ -70,7 +70,7 @@ Các đường dẫn API: `GET /health`, `GET /models`, `POST /predict`, `POST /
 
 ## Huấn luyện lại
 
-Cần tệp dữ liệu có hai cột `url`, `label` (nhãn 0 là hợp lệ, nhãn 1 là giả mạo). Tệp `data/urls.csv` dùng trong đồ án không nằm trong repo; `data/urls_raw.csv` là dữ liệu thô đã có sẵn.
+Cần tệp dữ liệu có hai cột `url`, `label` (nhãn 0 là hợp lệ, nhãn 1 là giả mạo). Tệp `data/urls.csv` (814.774 URL: 480.606 nhãn 0 và 334.168 nhãn 1) là dữ liệu dùng trong đồ án; `data/urls_raw.csv` là dữ liệu thô.
 
 ```powershell
 .\.venv\Scripts\python.exe train.py --data data/urls.csv --out runs/url_only_v10 --max-per-domain 200 --embedding-dim 128 --filters 128 --kernel-size 3 --lstm-units 64 --deep-dim 64 --batch-size 128 --learning-rate 0.00138711 --dropout 0.3315 --trees 500 --rf-max-depth 24 --rf-min-leaf 2 --rf-max-features log2
